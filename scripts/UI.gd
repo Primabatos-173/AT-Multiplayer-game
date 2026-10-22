@@ -4,10 +4,10 @@ extends Node
 
 
 func _on_server_pressed() -> void:
-	pass # Replace with function body.
+	print("server")
 	NetworkHandler.start_server()
 
 
 func _on_client_pressed() -> void:
-	print("yes")
+	print("client")
 	NetworkHandler.start_client()
