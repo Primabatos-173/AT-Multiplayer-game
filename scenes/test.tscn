@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c37s45vmowipi"]
+
+[ext_resource type="PackedScene" uid="uid://eg11swdiyphu" path="res://scenes/UI.tscn" id="1_bl13t"]
+[ext_resource type="Script" uid="uid://eylcryqq141n" path="res://scripts/player spawner.gd" id="2_iyx0m"]
+[ext_resource type="PackedScene" uid="uid://cs8ynuo1b3q3g" path="res://scenes/player.tscn" id="3_iyx0m"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Ui" parent="." instance=ExtResource("1_bl13t")]
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 5.0
+offset_bottom = 10.0
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://cs8ynuo1b3q3g")
+spawn_path = NodePath("..")
+script = ExtResource("2_iyx0m")
+network_player = ExtResource("3_iyx0m")
